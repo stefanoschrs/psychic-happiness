@@ -1,0 +1,14 @@
+.flight {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.location,
+.dates,
+.price {
+    flex: 1;
+}
+
+.price {
+    font-weight: bold;
+}
