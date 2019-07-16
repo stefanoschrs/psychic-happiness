@@ -6,6 +6,15 @@
   ],
   "routes": [
     { "src": "/", "status": 404 },
-    { "src": "/(.+)", "methods": ["GET"], "dest": "/app.js" }
+    {
+      "src": "/(.+)",
+      "methods": ["GET"],
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "https://stefanoschrs.github.io"
+        }
+      ],
+      "dest": "/app.js" }
   ]
 }
