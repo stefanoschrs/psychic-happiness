@@ -5,6 +5,7 @@
     { "src": "app.js", "use": "@now/node" }
   ],
   "routes": [
-    { "src": "/(.+)", "dest": "/app.js" }
+    { "src": "/", "status": 404 },
+    { "src": "/(.+)", "methods": ["GET"], "dest": "/app.js" }
   ]
 }

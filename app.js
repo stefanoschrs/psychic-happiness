@@ -1,15 +1,16 @@
 const { parse } = require('url')
+const { getFlights } = require('./crawler')
 
 module.exports = async function (req, res) {
   try {
-    const { pathname = '/' } = parse(req.url)
+    // TODO: Add parameters for City, Dates
+    // const { pathname = '/' } = parse(req.url)
+    const flights = await getFlights()
 
     res.setHeader('Content-Type', 'application/json')
-    res.status(200).send({
-      pathname
-    })
-  } catch (e) {
-    console.error(e.message)
+    res.status(200).send({ flights })
+  } catch (err) {
+    console.error(err.message)
 
     res.setHeader('Content-Type', 'text/html')
     res.status(500).send('<h1>Unexpected Error</h1><p>Sorry, there was a problem</p>')

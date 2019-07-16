@@ -1,0 +1,23 @@
+{
+  "name": "psychic-happiness",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanoschrs/psychic-happiness.git"
+  },
+  "author": "Stefanos Chrs <root@stefanoschrs.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stefanoschrs/psychic-happiness/issues"
+  },
+  "homepage": "https://github.com/stefanoschrs/psychic-happiness#readme",
+  "dependencies": {
+    "chrome-aws-lambda": "^1.18.1",
+    "puppeteer-core": "^1.18.1"
+  }
+}
