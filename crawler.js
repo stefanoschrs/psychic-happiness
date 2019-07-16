@@ -1,6 +1,7 @@
 const puppeteer = require('puppeteer-core')
 const chrome = require('chrome-aws-lambda')
 
+const url = 'https://www.google.fr/flights?lite=0&hl=en#flt=NTE..2019-07-28*.NTE.2019-08-01;c:EUR;e:1;ls:we;p:5000.2.EUR;sd:0;t:e'
 const nowRegion = process.env.NOW_REGION
 
 async function getFlights() {
